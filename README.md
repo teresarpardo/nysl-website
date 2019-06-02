@@ -1,4 +1,3 @@
-# nysl-website
-Northside Youth Soccer League Website
+# NYSL WEBSITE
 
-A responsive website for NYSL soccer league built with HTML and CSS and form validation with JavaScript
+A responsive website for NYSL Soccer league built with HTML and CSS and form validation with JavaScript
