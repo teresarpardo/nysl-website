@@ -1,0 +1,310 @@
+*{
+  box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: stretch;
+    align-items:stretch;
+    flex-grow: 1;
+    font-family:'Arial';
+}
+
+/*Header*/
+
+
+header{
+    display: flex;
+    flex-flow: column nowrap;
+    flex-shrink: 1;
+    background-image: url("../img/design2.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0,0,0,0.5);
+    background-blend-mode:luminosity;
+    
+    padding-right: 10px;
+}
+
+.logo{
+  height: 100px;
+}
+.logo:hover{
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+.header-container{
+    display:flex;
+    flex-direction:column;
+    flex-grow: 1;
+}
+.header-row{
+    display:flex;
+    flex:row nowrap;
+    justify-content: space-between;
+    align-items:flex-start;
+}
+.nav-bar{
+    display:flex;
+    flex-flow:row wrap;
+    justify-content: space-between;
+    list-style-type:none; 
+    flex-grow:.3;
+    align-items: center;
+}
+.nav-button a{
+    text-decoration:none;
+    color:white;
+    font-size: 1.2em;
+}
+
+.nav-button a:hover:not(.active) {
+    color:darkred;
+    padding-bottom: .2em;
+    border-bottom: solid;
+    border-bottom-color: darkred;
+}
+.nav-button .active{
+    color:brown;
+   
+}
+
+.title{
+    display:flex;
+    justify-content:flex-end;
+    flex-grow: 1; 
+    color:white;
+    font: 3.5em 'Permanent Marker', cursive; 
+}
+.subtitle{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content:flex-start;
+    flex-grow: 1;
+    color:brown;
+    height:0px;
+    font: bold 3em 'Permanent Marker', cursive; 
+    text-shadow: 0.1em 0.1em white;
+}
+
+/*Body*/
+
+.flex-container{
+    display:flex;
+    flex-flow: column wrap;
+    align-self: center;
+    width:70%;
+    padding:5% 0; 
+    align-self: center;
+}
+.contact-information, .info-column {
+    align-self:center;
+}
+
+.sub-subtitle{
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    text-decoration:underline;
+    text-decoration-color:brown; 
+}
+.text-title, .event-date {
+    font-size: 1.5em;
+    font-weight: 900;
+}
+.text-title::first-letter, .event-date::first-letter{
+    color:brown;
+    font-size:2em;
+}
+.rules-title{
+    font-size:1.3em;
+}
+.text-paragraph, .event-paragraph, .rules-annotation, .rules-paragraph, .bold-text{
+    font-size: 1.2em;
+}
+.small-title, .small-text{
+    font-size: 1em;
+}
+.bold-text, .small-title{
+    font-weight: 900; 
+}
+.email{
+    color:brown;
+    text-decoration:none;
+}
+
+.sub-subtitle, .rules-title{
+    text-decoration:underline;
+    text-decoration-color:brown;    
+}
+
+.rules-annotation{
+    font-style:italic;
+}
+.rules-ordered{
+   list-style-type:upper-roman;
+}
+.rules-unordered{
+    list-style-type:circle;
+}
+
+
+/*Tabla*/
+
+.table-calendar, .table-directions {
+    border-collapse:collapse;
+    margin-bottom: 5%;
+    width:100%;  
+}
+.table-calendar{
+    border: 3px dashed brown;
+    border-radius: 5px;
+    padding: 3%;
+    background-color: #fafafa;
+    font-size: 1em;
+}
+
+th, td {
+  text-align:left;
+  padding: .5em;
+}
+
+.table-directions tbody tr:nth-child(odd) {
+    background-color: #fafafa;
+}
+.table-calendar thead{
+    text-decoration:underline;
+}
+.text-adress{
+    font: 0.75em;
+    color:dimgrey;
+}
+.map{
+    display: flex;
+    justify-content: flex-end;
+}
+
+/*Form*/
+
+.contact-form{
+    border: 3px dashed brown;
+    border-radius: 50px;
+    padding: 3%;
+    background-color: #fafafa;
+    font-size: 1em;
+}
+
+.form-row{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items:center;
+    
+}
+
+.form-column, .info-column{
+    display:flex;
+    flex-flow: column wrap;
+    justify-content:flex-start; 
+    align-items:stretch;
+}
+
+.list-row{
+    list-style: none;
+    display:flex;
+    flex-flow: row wrap; 
+    flex-grow: 1;
+    justify-content:space-between; 
+}
+
+
+.half-row, .onethird-row, .twothird-row{
+    display:flex;
+    flex-flow: row wrap; 
+    align-items: center;
+    justify-content:flex-start;
+}
+.half-row, .twothird-row{
+    flex-grow: 1;
+}
+.onethird-row{
+    flex-grow: .5;
+}
+
+.half-column{
+    display:flex;
+    flex-flow: column nowrap;
+    flex-grow: 1;
+
+}
+.quarter-column{
+    display:flex;
+    flex-flow: column wrap; 
+    flex-grow: .5;  
+    justify-content: space-between;
+}
+input[type=text], input[type=email], input[type=number],input[type=date]{
+    flex-grow: 1; 
+    border: none;
+    border-bottom: 1px dotted grey;
+    background-color:#fafafa;
+    font: 1.2em 'Patrick Hand', cursive;
+    margin-left: 5px;
+}
+.left {
+    margin-right: 20px;
+}
+.submit-button{
+    flex-grow: .1;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 5%;
+    
+    background-color: brown;
+    color: white;
+    padding: 5px; 
+    border-radius: 50px;
+    font: 1.5em 'Patrick Hand', cursive;
+}
+.submit-button:hover{
+    transform: scale(1.1);
+    transition: 1s;
+}
+.radio, .checkbox {
+    margin-right: 1.2em;
+}
+.table-feedback{
+    border-collapse:collapse;
+    background-color:#fafafa;
+    border: 3px dashed black;
+}
+
+/*Footer*/
+footer{
+    display:flex;
+    flex-flow: column wrap;  
+}
+
+.page-footer{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items:center;
+    background-color:#dddddd;
+    color:white;
+}
+
+.arrow {
+    display:flex;
+    flex-direction: row;
+    justify-content:flex-end;
+    font-size:2em;
+    color:#dddddd;
+}
+.arrow:hover{
+    color: grey;
+    transition: 1s;
+}
+
